@@ -1,8 +1,12 @@
 # Release checklist
 
-- Confirm the fixed-length Definition 3.7 scope, including the rational cross-distance hypothesis and rational move endpoints.
-- Use the source-linked, bounded priority language in the literature report. Credit Messick, the quadratic-form transport framework and known rational attainment for quadratic programs.
-- Confirm DannyExperiments as organizational citation identity, the model disclosures and rights.
-- Verify the exact candidate commit, all workflow runs, release archive members and checksums.
-- Leave visibility private pending human approval. Verify the actual public tag, archive access and versioned citation metadata at publication.
-- Confirm any DOI deposit and external notice under separate authorization.
+| Item | Record |
+|---|---|
+| Version | [v1.0.0](https://github.com/DannyExperiments/chain-young-metric-attainment/releases/tag/v1.0.0) |
+| Mathematical scope | Fixed-length rational step words, rational cross-distances and the stated irrational-distance example. |
+| Mathematical content | The paper, replay and illustration match [the reviewed commit](https://github.com/DannyExperiments/chain-young-metric-attainment/commit/f6153ac4ea6df8172336abe02831fa3cafef8646) byte for byte. |
+| Verification | Confirm repository integrity, replay and PDF build on the exact release commit before changing visibility. |
+| Attribution | DannyExperiments is the citation identity. The manuscript has no byline. See [research disclosure](../AI_DISCLOSURE.md). |
+| Scholarly status | Internally reviewed. External peer review and formal verification have not been conducted. |
+| Rights | All rights reserved as stated in [LICENSE_STATUS.md](../LICENSE_STATUS.md). |
+| Version DOI | [10.5281/zenodo.24568149](https://doi.org/10.5281/zenodo.24568149) |

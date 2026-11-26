@@ -1,19 +1,28 @@
 {
   "title": "Attainment of the chain Young metric on rational step words",
+  "upload_type": "software",
+  "publication_date": "2026-11-27",
+  "version": "1.0.0",
   "creators": [
     {
       "name": "DannyExperiments"
     }
   ],
-  "description": "<p>Messick's fixed-length chain Young metric on rational step words attains its infimum if all source-to-target letter distances are rational. A quadratic run-transport formula explains attainment and gives an example of irrational-distance nonattainment.</p><p>Under human direction, ChatGPT Astra 6.2 (OpenAI) generated the discovery proof and its research packet. Claude Opus 5.5 (Anthropic) assisted with earlier audits and manuscript preparation. OpenAI Codex performed the mathematical review and revised the paper. GPT-6.2 Sol assisted with literature searches and release preparation. DannyExperiments maintains the repository and is the preferred citation identity. No AI system is proposed as an author.</p>",
-  "access_right": "closed",
-  "upload_type": "publication",
-  "publication_type": "preprint",
-  "language": "eng",
+  "description": "<p>Messick's fixed-length chain Young metric on rational step words has a finite minimizing chain when distances between source and target letters are rational. The chain can use only the letters of the two words. The cost is a quadratic run-transport minimum with a strict inversion term.</p><p>The result uses rational move intervals and words identified up to almost-everywhere equality. A two-letter example gives nonattainment for irrational letter distances strictly between zero and one half. The proof credits Messick's grid refinement, quadratic-form optimal transport, and classical rational quadratic minimizers.</p><p>The exact replay compares fixed-grid chains with run transport on 1,243 word pairs and verifies the three-move example of cost 2/9.</p><p>Includes the manuscript, LaTeX and bibliography, exact replay, audit excerpts, and an interactive illustration. Internally reviewed.</p><p>Under human direction, ChatGPT Astra 6.2 (OpenAI) generated the discovery proof and its research packet. Claude Opus 5.5 (Anthropic) assisted with earlier audits and manuscript preparation. OpenAI Codex performed the mathematical review and revised the paper. GPT-6.2 Sol assisted with literature searches and release preparation. DannyExperiments maintains the repository and is the preferred citation identity. No AI system is proposed as an author.</p>",
   "keywords": [
     "chain Young metric",
     "rational step words",
     "quadratic-form optimal transport",
     "attainment"
+  ],
+  "access_right": "open",
+  "license": "other-closed",
+  "notes": "All rights reserved. Publicly downloadable files are supplied without a repository-wide reuse license.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/DannyExperiments/chain-young-metric-attainment/releases/tag/v1.0.0",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
   ]
 }

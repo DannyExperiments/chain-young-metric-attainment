@@ -1,6 +1,7 @@
 # Attainment of the chain Young metric on rational step words
 
 [![Repository verification](https://github.com/DannyExperiments/chain-young-metric-attainment/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/chain-young-metric-attainment/actions/workflows/verify.yml) [![Replay verification](https://github.com/DannyExperiments/chain-young-metric-attainment/actions/workflows/replay.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/chain-young-metric-attainment/actions/workflows/replay.yml) [![PDF build](https://github.com/DannyExperiments/chain-young-metric-attainment/actions/workflows/pdf.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/chain-young-metric-attainment/actions/workflows/pdf.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24568149.svg)](https://doi.org/10.5281/zenodo.24568149)
 
 Messick asked whether a cheapest finite chain exists between two rational step words of the same length when letter distances are rational. It does. Rational distances between each source letter and each target letter suffice, and an optimal chain can use only letters from the two words.
 
@@ -28,3 +29,5 @@ python3 -I verification/src/replay.py
 ```
 
 The [recorded exact checks](verification/results/replay.txt) compare fixed-grid shortest paths with run-transport optimization on 1,243 word pairs and replay the three-move chain. The [manuscript](paper/manuscript.pdf) proves the general result. See [reproducibility](REPRODUCIBILITY.md), [scope](CLAIM_SCOPE_AND_LIMITATIONS.md) and [research disclosure](AI_DISCLOSURE.md).
+
+[Release v1.0.0](https://github.com/DannyExperiments/chain-young-metric-attainment/releases/tag/v1.0.0) · [Version DOI](https://doi.org/10.5281/zenodo.24568149) · [Citation metadata](CITATION.cff)

@@ -1,4 +1,4 @@
-# Candidate manifest
+# Release manifest
 
 These files are covered by the repository SHA-256 ledger.
 
