@@ -1,0 +1,19 @@
+{
+  "title": "Attainment of the chain Young metric on rational step words",
+  "creators": [
+    {
+      "name": "DannyExperiments"
+    }
+  ],
+  "description": "<p>Messick's fixed-length chain Young metric on rational step words attains its infimum if all source-to-target letter distances are rational. A quadratic run-transport formula explains attainment and gives an example of irrational-distance nonattainment.</p><p>Under human direction, ChatGPT Astra 6.2 (OpenAI) generated the discovery proof and its research packet. Claude Opus 5.5 (Anthropic) assisted with earlier audits and manuscript preparation. OpenAI Codex performed the mathematical review and revised the paper. GPT-6.2 Sol assisted with literature searches and release preparation. DannyExperiments maintains the repository and is the preferred citation identity. No AI system is proposed as an author.</p>",
+  "access_right": "closed",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "language": "eng",
+  "keywords": [
+    "chain Young metric",
+    "rational step words",
+    "quadratic-form optimal transport",
+    "attainment"
+  ]
+}

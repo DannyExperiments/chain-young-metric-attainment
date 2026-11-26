@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please use the organizational citation identity below."
+title: "Attainment of the chain Young metric on rational step words"
+authors:
+  - name: DannyExperiments
+type: article
+repository-code: "https://github.com/DannyExperiments/chain-young-metric-attainment"
+abstract: "The fixed-length chain Young metric on rational step words has an attaining finite chain when distances between source and target letters are rational. A run-transport formulation includes a quadratic inversion cost."
+keywords:
+  - chain Young metric
+  - rational step words
+  - quadratic-form optimal transport
+  - attainment

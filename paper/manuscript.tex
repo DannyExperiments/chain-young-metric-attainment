@@ -1,0 +1,110 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Attainment of the chain Young metric on rational step words}}
+\DeclareMathSizes{8}{8}{8}{8}
+\DeclareMathSizes{9}{9}{8}{8}
+\DeclareMathSizes{10.95}{10.95}{8}{8}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\dd}{d_\Sigma}
+\newcommand{\dc}{d_{\mathrm C}}
+\title{Attainment of the chain Young metric on rational step words}
+\date{November 2026}
+
+\begin{document}
+\begin{abstract}
+Messick conjectured that the chain Young metric between rational step words attains its infimum when the alphabet distances are rational. We express the metric as a transport problem with a linear relabeling cost and a quadratic inversion cost. A rational optimal plan gives a finite chain. It suffices that each distance between a source letter and a target letter be rational, and the chain can use only endpoint letters. Two-letter words give examples of nonattainment with irrational letter distance.
+\end{abstract}
+\maketitle
+
+\section{The fixed-length metric}
+
+Let \((\Sigma,\dd)\) be a metric alphabet. A rational step word on \([0,L]\) is constant on each interval of a finite rational partition. We identify words up to almost-everywhere equality, as in Messick's convention \cite[p.~30]{messick}. Fix the common length \(L\). On a rational interval of length \(a\) where the word is constant, a \emph{vertical push} from \(\sigma\) to \(\tau\) costs \(a\dd(\sigma,\tau)\). A \emph{neighbor swap} exchanges the values on two consecutive constant rational intervals of length \(a\), at cost \(a^2\). Definition~3.7 of \cite{messick} takes \(\dc(u,v)\) to be the infimum of the total cost of a finite chain of these moves. Footnote~2 on p.~35 conjectures attainment when alphabet distances are rational.
+
+Write \(A_1,\ldots,A_m\) for the letters of the successive runs of \(u\), with lengths \(a_1,\ldots,a_m\), and \(B_1,\ldots,B_n\) for those of \(v\), with lengths \(b_1,\ldots,b_n\). Repeated letters on different runs have separate indices. For \(L>0\), let
+\[
+\mathcal P=\left\{X=(x_{ij})\in\mathbb R_{\ge 0}^{m\times n}:
+   \sum_j x_{ij}=a_i,\quad\sum_i x_{ij}=b_j\right\}.
+\]
+A cell \(x_{ij}\) is the length of material sent from run \(i\) to run \(j\). Define
+\[
+F(X)=\sum_{i,j}\dd(A_i,B_j)x_{ij}
+       +\sum_{\substack{i<k\\ j>l}} x_{ij}x_{kl}.
+\]
+
+\begin{theorem}\label{thm:main}
+For equal-length rational step words, \(\dc(u,v)=\min_{X\in\mathcal P}F(X)\) when \(L>0\). If all the cross-distances \(\dd(A_i,B_j)\) are rational, a finite chain attains \(\dc(u,v)\) and can use only letters of \(u\) and \(v\). The empty chain suffices when \(L=0\).
+\end{theorem}
+
+The ambient alphabet may contain other letters at arbitrary distances. The argument uses only the metric axioms for intermediate letters, so the compact alphabet in Messick's setting is sufficient. The theorem concerns Definition~3.7, with length fixed throughout, and all move intervals rational.
+
+\section{From chains to transport and back}
+
+\begin{proof}[Proof of the transport formula]
+Fix a finite chain. Choose a rational cell width \(h>0\) dividing the length and every breakpoint of its moves and endpoint words. Regard its cells as distinguishable tokens. A push on \(r\) cells is \(r\) cell pushes with the same total cost. A block swap of two adjacent \(r\)-cell blocks is a permutation preserving the order within each block. It can be performed by \(r^2\) adjacent cell swaps, one for each reversed pair, with the original cost \(r^2h^2\). This refinement is Messick's common-grid reduction \cite[Observations~3.10--3.11]{messick}. Equal letters may be exchanged during the token bookkeeping and still charged at the stated refinement cost.
+
+Count tokens by their source run \(i\) and target run \(j\). Their counts times \(h\) give a rational \(X\in\mathcal P\). Each token's push costs sum to at least \(h\dd(A_i,B_j)\) by the triangle inequality. For \(i<k\) and \(j>l\), each token in cell \((i,j)\) reverses order with each token in cell \((k,l)\). Each pair must be exchanged at least once and the counted pairs are distinct. Together the costs of these exchanges are at least
+\(
+h^2(x_{ij}/h)(x_{kl}/h)=x_{ij}x_{kl}
+\)
+for each such pair of cells. Thus the cost of the chain is at least \(F(X)\).
+
+Conversely, take any rational \(X\in\mathcal P\) and a cell width \(h\) dividing every positive entry. Within each source run \(i\), allocate its tokens to target runs in increasing order of \(j\), using consecutive blocks of size \(x_{ij}/h\). Within every target run \(j\), place the arriving blocks in increasing order of \(i\) and preserve order within each block. This defines a permutation reversing precisely the pairs counted above. Relabel each token directly to its target letter at the start. Then perform the permutation by swapping adjacent inverted tokens until none remain. For labeled tokens each swap removes one inversion. When the exchanged tokens carry the same letter, omit that move on the word and keep the bookkeeping exchange. The realized cost is at most \(F(X)\), and the chain uses only letters of the endpoint words.
+
+The polytope \(\mathcal P\) is nonempty, since \(x_{ij}=a_i b_j/L\) is feasible, and compact. Rational feasible points are dense. To see this at any feasible point, fix its zero coordinates and use rational linear algebra on the remaining marginal equations. Rational solutions approximate the point in that affine space, preserving every strictly positive coordinate when close enough. Continuity of \(F\) gives \(\inf_{X\in\mathcal P\cap\mathbb Q^{m\times n}}F(X)=\min_{\mathcal P}F\). The chain bounds give both inequalities for the formula in Theorem~\ref{thm:main}.
+\end{proof}
+
+\section{Attainment with rational cross-distances}
+
+\begin{lemma}\label{lem:rational}
+A quadratic polynomial with rational coefficients on a nonempty compact rational polytope has a rational minimizer.
+\end{lemma}
+
+This rationality fact is standard in quadratic programming \cite{vavasis,delpia}. Here is the short face argument.
+
+\begin{proof}
+Take a minimizer \(x_*\) and the affine hull \(E\) of the smallest face containing it. The face is rational and \(x_*\) lies in its relative interior. Its tangent space \(T\) has a rational basis. In that basis the equations \(x\in E\) and \(\nabla F(x)\perp T\) form a rational linear system. They are consistent because \(x_*\) is stationary on \(E\). Rational solutions are dense in the solution space, so a rational solution \(y\) lies close enough to \(x_*\) to remain in the face. The segment from \(x_*\) to \(y\) consists of stationary solutions, and its direction belongs to \(T\). The derivative of \(F\) along the segment is zero, giving \(F(y)=F(x_*)\).
+\end{proof}
+
+\begin{proof}[Completion of the proof of Theorem~\ref{thm:main}]
+The only coefficients of \(F\) that may be irrational are the cross-distances. When they are rational, Lemma~\ref{lem:rational} gives a rational minimizer \(Y\in\mathcal P\). The chain constructed from \(Y\) has cost at most \(F(Y)=\dc(u,v)\), so it attains the infimum.
+\end{proof}
+
+The finite program is an instance of quadratic-form optimal transport \cite{wangzhang}. For example, normalize to the probability coupling \(X/L\) and draw two independent cells \((i,j)\) and \((k,l)\). Writing \(d_{ij}=\dd(A_i,B_j)\), the expectation of
+\[
+\frac{L}{2}(d_{ij}+d_{kl})+
+\frac{L^2}{2}\,\mathbf{1}_{\{(i-k)(j-l)<0\}}
+\]
+equals \(F(X)\). The second summand uses the strict discordance indicator that also enters Kendall's tau. The factors account for the total mass and the two orders of each crossing pair. The chain-specific steps are the identification with the transport objective and the reconstruction of legal moves.
+
+\section{A sharp two-letter example}
+
+Let \(u=AB\) and \(v=BA\), with both runs of length \(1/2\). Set \(d=\dd(A,B)>0\). Every feasible \(2\times2\) matrix has \(x_{12}=x_{21}=t\) and \(x_{11}=x_{22}=1/2-t\), with \(0\le t\le 1/2\). Then
+\[
+F(X)=d(1-2t)+t^2=(t-d)^2+d-d^2.
+\]
+For \(0<d<1/2\) the unique optimum is \(t=d\). When \(d=1/3\), the value is \(2/9\), and a chain on a sixth-unit grid attains it. The original half-unit grid allows only \(t=0\) and \(t=1/2\) and has best cost \(1/4\).
+
+For irrational \(d\in(0,1/2)\), the formula still gives infimum \(d-d^2\), while every finite chain gives a rational transport matrix and hence costs strictly more. Thus the rational move-interval convention matters for the nonattainment example.
+
+\section*{Research disclosure}
+
+\begingroup\hyphenpenalty=10000\exhyphenpenalty=10000\emergencystretch=1em\relax
+Under human direction, ChatGPT Astra 6.2 (OpenAI) generated the discovery proof and its research packet. Claude Opus 5.5 (Anthropic) assisted with earlier audits and manuscript preparation. OpenAI Codex performed the mathematical review and revised the paper. GPT-6.2 Sol assisted with literature searches and release preparation. DannyExperiments maintains the repository and is the preferred citation identity. No AI system is proposed as an author.
+\par\endgroup
+
+\begin{thebibliography}{9}
+\bibitem{messick}
+S. B. Messick, \emph{Continuous automata, compactness, and Young measures}, Ph.D. thesis, Cornell University, 2016. \href{https://doi.org/10.7298/X4D798BM}{doi:10.7298/X4D798BM}. See \S3.3, Definition~3.7 and footnote~2.
+\bibitem{vavasis}
+S. A. Vavasis, \emph{Quadratic programming is in NP}, Inform. Process. Lett. \textbf{36} (1990), no.~2, 73--77. \href{https://doi.org/10.1016/0020-0190(90)90100-C}{Publisher record}.
+\bibitem{delpia}
+A. Del Pia, S. S. Dey, and M. Molinaro, \emph{Mixed-integer quadratic programming is in NP}, Math. Program. \textbf{162} (2017), 225--240. \href{https://arxiv.org/abs/1407.4798}{arXiv:1407.4798}.
+\bibitem{wangzhang}
+R. Wang and Z. Zhang, \emph{Quadratic-form optimal transport}, Math. Program. (2025). \href{https://doi.org/10.1007/s10107-025-02282-5}{doi:10.1007/s10107-025-02282-5}. See Appendix~A and the Kendall's tau example.
+\end{thebibliography}
+\end{document}

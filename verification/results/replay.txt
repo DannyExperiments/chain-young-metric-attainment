@@ -1,0 +1,6 @@
+Binary alphabet, unit length: 340 exact edit-path / transport comparisons.
+Ternary rational metric, unit length: 819 exact comparisons.
+Binary alphabet, length 3/2: 84 exact comparisons.
+AB to BA at distance 1/3: half grid optimum 1/4, sixth grid optimum 2/9.
+Two 1/6 pushes and one 1/3 block swap realize the analytical optimum 2/9.
+All finite checks passed.
